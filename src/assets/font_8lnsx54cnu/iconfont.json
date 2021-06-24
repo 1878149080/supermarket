@@ -1,0 +1,100 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21129553",
+      "name": "bridge",
+      "font_class": "bridge",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "21129554",
+      "name": "cape",
+      "font_class": "cape",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "21624839",
+      "name": "edit",
+      "font_class": "edit",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "21624840",
+      "name": "handset",
+      "font_class": "handset",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "21624841",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "21624842",
+      "name": "image",
+      "font_class": "image",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "21624843",
+      "name": "message",
+      "font_class": "message",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "21624844",
+      "name": "qrcode",
+      "font_class": "qrcode",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "21624845",
+      "name": "questtion",
+      "font_class": "questtion",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "21897244",
+      "name": "全部",
+      "font_class": "quanbu",
+      "unicode": "eb80",
+      "unicode_decimal": 60288
+    },
+    {
+      "icon_id": "22127504",
+      "name": "购物车2",
+      "font_class": "gouwuche2",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "22325360",
+      "name": "卖家中心",
+      "font_class": "maijiazhongxin",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "22325491",
+      "name": "常用设置",
+      "font_class": "changyongshezhi",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    }
+  ]
+}

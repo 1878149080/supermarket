@@ -1,0 +1,22 @@
+@import "./normalize.css";
+
+body,p,div,h1,h2,h3,h4,h5,h6,span,input{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: '微软雅黑';
+    font-size:16px;
+    color:black;
+}
+li{
+    list-style: none;
+}
+button{
+    border:none;
+}
+input{
+    outline:none;
+    border:none;
+}
