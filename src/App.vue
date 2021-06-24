@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import MainBar from './components/common/main-bar.vue'
+import MainBar from "./components/content/main-bar.vue"
 export default {
   name: 'App',
   components: {
-    MainBar
+    MainBar,
   }
 }
 </script>
