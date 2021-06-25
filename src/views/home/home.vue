@@ -1,13 +1,29 @@
 <template>
     <div id="home">
-      <mynav color="#fff" bcolor="pink">购物街</mynav>
+      <mynav color="#fff" bcolor="pink" class="mynav">购物街</mynav>
       <carousel></carousel>
       <home-recommend :recommend='recommend'></home-recommend>
       <feature :week='week'></feature>
-      <bar-control :title="title"></bar-control>
+      <bar-control :title="title" class="bar-control"></bar-control>
       home
       home
       home
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
+      <div>home</div>
       <div>home</div>
       <div>home</div>
       <div>home</div>
@@ -64,7 +80,12 @@ export default {
 }
 </script>
 <style>
-#home{
-  /* background:#fff; */
+.bar-control{
+  position:sticky;
+  top:44px;
+}
+.mynav{
+  position:sticky;
+  top:0;
 }
 </style>
