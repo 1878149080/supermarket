@@ -22,7 +22,7 @@ export default {
 <style>
 .carousel{
     width:100%;
-    height:100px;
+    height:200px;
     background:chocolate;
 }
 .carousel img{
