@@ -1,5 +1,5 @@
 <template>
-    <bar>
+    <bar class="main-bar">
         <item-bar path='/home' icon="icon-home" color='#ff0066'>home</item-bar>
         <item-bar path='/category' icon="icon-image" color="#00ff99">category</item-bar>
         <item-bar path='/shopcart' icon="icon-bridge" color="#66ffff">shopcart</item-bar>
@@ -27,5 +27,8 @@ export default {
 }
 </script>
 <style>
-
+.main-bar{
+  z-index: 999;
+  background:#fff;
+}
 </style>

@@ -40,6 +40,7 @@ export default {
 </script>
 <style>
 .item-nav{
+    z-index: 999;
     height:44px;
     border-bottom:1px solid 	#D9D9D9;
     display:flex;

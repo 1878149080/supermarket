@@ -9,6 +9,7 @@ body{
     font-family: '微软雅黑';
     font-size:16px;
     color:black;
+    background:#ebebeb80;
 }
 li{
     list-style: none;

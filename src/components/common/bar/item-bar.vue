@@ -51,6 +51,7 @@ export default {
 
 <style>
 #item-bar{
+    z-index: 999;
     font-size:12px;
     text-align: center;
 }
