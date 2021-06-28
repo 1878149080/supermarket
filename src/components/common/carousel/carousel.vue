@@ -9,7 +9,12 @@ export default {
       // 组件名称
     name: 'carousel',
     // 组件参数 接收来自父组件的数据
-    props: {},
+    props: {
+      carousel : { 
+        type : Array,
+        default : '../../../assets/images/beauty.webp'
+      }
+    },
       // 局部注册的组件
     components: {},
       // 组件状态值
