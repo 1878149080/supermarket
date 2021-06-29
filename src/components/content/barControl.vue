@@ -15,7 +15,14 @@ export default {
       // 组件名称
     name: 'barControl',
     // 组件参数 接收来自父组件的数据
-    props: ['title'],
+    props: {
+        title : {
+            type : Array,
+            default : function(){
+                return [];
+            }
+        }
+    },
       // 局部注册的组件
     components: {},
       // 组件状态值
@@ -26,8 +33,9 @@ export default {
     },
     methods : {
         isActive(index){
+            this.$emit('tabclick',index);
             return this.currentIndex = index;
-        }
+        },
     }
 }
 </script>

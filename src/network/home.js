@@ -38,3 +38,17 @@ export function getWeek(){
     });
 }
 
+
+
+
+export function getHomeGoods(type,page){
+    return request({
+        url : 'http://www.liulongbin.top:3006/api/getbooks',
+        method : 'get',
+        params : {
+            type : type,
+            page : page
+        }
+    })
+}
+
