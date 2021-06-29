@@ -1,9 +1,9 @@
 <template>
     <div class="home-recommend">
         <recommend
-        recommend="recommend" 
-        v-for="(index,item) in recommend" 
-        :key="item" 
+        :recommend="recommend" 
+        v-for="(item,index) in recommend" 
+        :key="index" 
         :image='item.image'
         :link="item.link"
         :text="item.text"></recommend>
@@ -20,7 +20,9 @@ export default {
     props: {
         recommend : {
             type : Array,
-            default : []
+            default : function (){
+                return [];
+            }
         }
     },
       // 局部注册的组件
@@ -32,6 +34,8 @@ export default {
             
         }
     },
+    created(){
+    }
 }
 </script>
 <style>

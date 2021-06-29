@@ -24,3 +24,17 @@ export function getCarouselThree(){
     });
 }
 
+export function getRecommend(){
+    return request({
+        url : 'http://www.liulongbin.top:3006/api/getbooks',
+        method : 'get'
+    });
+}
+
+export function getWeek(){
+    return request({
+        url : 'http://www.liulongbin.top:3006/api/getbooks',
+        method : 'get'
+    });
+}
+

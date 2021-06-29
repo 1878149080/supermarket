@@ -39,7 +39,7 @@ import HomeRecommend from "./children/HomeRecommend.vue"
 import feature from './children/feature.vue'
 import barControl from "../../components/content/barControl.vue"
 
-import {getCarousel} from '../../network/home'
+import {getCarousel, getRecommend} from '../../network/home'
 export default {
       // 组件名称
     name: 'home',
@@ -59,19 +59,19 @@ export default {
           carousel : [],
           // images : null,
           recommend :[
-                {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
-                {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
-                {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
-                {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'}
+                {image:'../../assets/images/beauty.webp',link:"#",text:'你好'},
+                {image:'../../assets/images/beauty.webp',link:"#",text:'我好'},
+                {image:'../../assets/images/beauty.webp',link:"#",text:'他好'},
+                {image:'../../assets/images/beauty.webp',link:"#",text:'大家好'}
           ],
           week : [
-            {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
-            {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
-            {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
-            {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
-            {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
-            {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
-            {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'},
+            {image:'../../../assets/images/beauty.webp',link:"#",text:'衣服'},
+            {image:'../../../assets/images/beauty.webp',link:"#",text:'鞋子'},
+            {image:'../../../assets/images/beauty.webp',link:"#",text:'袜子'},
+            {image:'../../../assets/images/beauty.webp',link:"#",text:'裤子'},
+            {image:'../../../assets/images/beauty.webp',link:"#",text:'手套'},
+            {image:'../../../assets/images/beauty.webp',link:"#",text:'哈哈哈'},
+            {image:'../../../assets/images/beauty.webp',link:"#",text:'呵呵呵'},
             {image:'../../../assets/images/beauty.webp',link:"#",text:'你好'}
           ],
           title : ['第一','第二','第三'],
@@ -98,6 +98,9 @@ export default {
         this.carousel.push(res);
         console.log(res);
       });
+      getRecommend().then(res=>{
+        // this.recommend = res;
+      })
     }
 }
 </script>

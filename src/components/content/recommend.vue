@@ -4,6 +4,7 @@
     image='image' 
     text='text'>
         <img  src="../../assets/images/beauty.webp">
+        <!-- <img :src="image"> -->
         <p>{{text}}</p>
     </a>
 </template>
