@@ -1,36 +1,15 @@
 <template>
     <div id="home">
       <mynav color="#fff" bcolor="pink" class="mynav">购物街</mynav>
-      <carousel :carousel='carousel'></carousel>
-      <home-recommend :recommend='recommend'></home-recommend>
-      <feature :week='week'></feature>
-      <bar-control :title="title" class="bar-control" @tabclick="tabClick"></bar-control>
-      <goods :goods="goods[currentType].list"></goods>
-      home
-      home
-      home
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      <div>home</div>
-      </div>
+      <scroll class=wrapper ref="scroll" :probe-type="3" @scroll="contentScroll">
+        <carousel :carousel='carousel'></carousel>
+        <home-recommend :recommend='recommend'></home-recommend>
+        <feature :week='week'></feature>
+        <bar-control :title="title" class="bar-control" @tabclick="tabClick"></bar-control>
+        <goods :goods="goods[currentType].list"></goods>
+      </scroll>
+      <back-top @click.native="backClick" :show="show"></back-top>
+    </div>
 </template>
 
 <script>
@@ -40,6 +19,8 @@ import HomeRecommend from "./children/HomeRecommend.vue"
 import feature from './children/feature.vue'
 import barControl from "../../components/content/barControl.vue"
 import goods from '../../components/content/goods/goods.vue'
+import scroll from "../../components/common/scroll/scroll.vue"
+import backTop from "../../components/content/backTop/backTop.vue"
 
 import {
   getCarousel, 
@@ -59,11 +40,14 @@ export default {
       HomeRecommend,
       feature,
       barControl,
-      goods
+      goods,
+      scroll,
+      backTop
     },
       // 组件状态值
     data () {
         return {
+          show : false,
           currentType : 'pop',
           carousel : [],
           // images : null,
@@ -136,6 +120,13 @@ export default {
         }
         console.log(index);
       },
+      backClick(){
+        // console.log(this.$refs.scroll);
+        this.$refs.scroll.scrollTop(0,0);
+      },
+      contentScroll(position){
+        this.show = position.y < -500 ? true : false;
+      },
 
       //网络请求方法
       getCarousel(){
@@ -165,5 +156,10 @@ export default {
 .mynav{
   position:sticky;
   top:0;
+}
+.wrapper{
+  height:calc(100vh - 44px - 49px);
+  overflow: hidden;
+  /* border:2px solid red; */
 }
 </style>
