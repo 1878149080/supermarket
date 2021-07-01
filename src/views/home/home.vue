@@ -1,7 +1,12 @@
 <template>
     <div id="home">
       <mynav color="#fff" bcolor="pink" class="mynav">购物街</mynav>
-      <scroll class=wrapper ref="scroll" :probe-type="3" @scroll="contentScroll">
+      <scroll class=wrapper 
+      ref="scroll" 
+      :probe-type="3" 
+      @scroll="contentScroll"
+      :pullUpLoad="true"
+      @pullingUp="loadMore">
         <carousel :carousel='carousel'></carousel>
         <home-recommend :recommend='recommend'></home-recommend>
         <feature :week='week'></feature>
@@ -125,7 +130,16 @@ export default {
         this.$refs.scroll.scrollTop(0,0);
       },
       contentScroll(position){
-        this.show = position.y < -500 ? true : false;
+        this.show = position.y < -500
+      },
+      loadMore(){
+        var arr = [
+          {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254},
+          {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254},
+        ]
+        this.getHomeGoods(this.currentType);
+        this.goods[this.currentType].list.push(...arr);
+        console.log('上拉加载更多')
       },
 
       //网络请求方法

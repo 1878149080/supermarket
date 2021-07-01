@@ -1,6 +1,9 @@
 <template>
     <div id="category">
       dsfgh
+      <form action="" @submit.prevent>
+        <input type="submit" value="dian" @click="change">
+      </form>
     </div>
 </template>
 
@@ -26,6 +29,11 @@ export default {
     },
     create(){
 
+    },
+    methods : {
+      change(){
+        console.log(234);
+      }
     }
 }
 </script>
