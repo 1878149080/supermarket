@@ -124,6 +124,8 @@ export default {
             break;
         }
         console.log(index);
+            // this.$refs.scroll.scroll.refresh(); 
+            // this.$refs.scroll.scroll.finishPullUp();
       },
       backClick(){
         // console.log(this.$refs.scroll);
@@ -170,9 +172,10 @@ export default {
             this.$refs.scroll.scroll.refresh();
             this.$refs.scroll.scroll.finishPullUp();
         })
+        // console.log(this)
         console.log('上拉加载更多')
       },
-    }
+    },
 }
 </script>
 <style>
