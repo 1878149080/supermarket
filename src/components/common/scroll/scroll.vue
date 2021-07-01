@@ -64,7 +64,6 @@ export default {
         }
     },
     created(){
-        // this.pull();
     }
 }
 </script>
