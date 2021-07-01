@@ -172,7 +172,6 @@ export default {
             this.$refs.scroll.scroll.refresh();
             this.$refs.scroll.scroll.finishPullUp();
         })
-        // console.log(this)
         console.log('上拉加载更多')
       },
     },
