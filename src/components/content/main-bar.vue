@@ -28,7 +28,7 @@ export default {
 </script>
 <style>
 .main-bar{
-  z-index: 999;
+  z-index: 9;
   background:#fff;
 }
 </style>

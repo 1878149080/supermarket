@@ -45,18 +45,19 @@ export default {
     border-bottom:1px solid 	#D9D9D9;
     display:flex;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
     align-items: center;
     font-size:21px;
     font-weight: 900;
     /* color:	#838B83; */
 }
 .item-nav>.left{
-    height:100%;
+    /* height:100%; */
     width:60px;
     text-align: center;
 }
 .item-nav>.right{
-    height:100%;
+    /* height:100%; */
     width:60px;
     text-align: center;
 }

@@ -40,6 +40,7 @@ export default {
             this.$emit('scroll',position);
         })
         this.pull();
+        console.log(this.pullUpLoad);
     },
     methods : {
         scrollInit(){
@@ -56,7 +57,7 @@ export default {
             this.scroll.scrollTo(x,y,time);
         },
         pull(){
-            this.scroll.on('pullingUp',()=>{
+            this.pullUpLoad && this.scroll.on('pullingUp',()=>{
                 this.$emit('pullingUp');
                 // this.scroll.finishPullUp();
                 // this.scroll.refresh();
@@ -68,5 +69,4 @@ export default {
 }
 </script>
 <style scoped>
-
 </style>

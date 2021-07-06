@@ -1,5 +1,5 @@
 <template>
-    <div class="goods-item">
+    <div class="goods-item" @click="itemClick">
         <img src="../../../assets/images/beauty.webp" alt="">
         <div>
             <span>{{item.description}}</span>
@@ -27,6 +27,11 @@ export default {
     data () {
         return {}
     },
+    methods : {
+        itemClick(){
+            this.$router.push({path:'/detail',query:{id:this.item.id}});
+        }
+    }
 }
 </script>
 <style>

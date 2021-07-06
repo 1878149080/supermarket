@@ -77,19 +77,19 @@ export default {
             pop : {
               page : 0,
               list : [
-                {image : '../../assets/images/beauty.webp',description : '份的如果他就和规范的撒头鲍鱼鸡风凉话',price :998},
-                {image : '../../assets/images/beauty.webp',description : '份的如果他就和规范的撒头鲍鱼鸡风凉话',price :998},
-                {image : '../../assets/images/beauty.webp',description : '份的如果他就和规范的撒头鲍鱼鸡风凉话',price :998},
-                {image : '../../assets/images/beauty.webp',description : '份的如果他就和规范的撒头鲍鱼鸡风凉话',price :998},
+                {image : '../../assets/images/beauty.webp',description : '份的如果他就和规范的撒头鲍鱼鸡风凉话',price :998,id:123456},
+                {image : '../../assets/images/beauty.webp',description : '份的如果他就和规范的撒头鲍鱼鸡风凉话',price :998,id:123456},
+                {image : '../../assets/images/beauty.webp',description : '份的如果他就和规范的撒头鲍鱼鸡风凉话',price :998,id:123456},
+                {image : '../../assets/images/beauty.webp',description : '份的如果他就和规范的撒头鲍鱼鸡风凉话',price :998,id:123456},
               ]
             },
             new : {
               page : 0,
               list : [
-                {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254},
-                {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254},
-                {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254},
-                {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254},
+                {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254,id:123456},
+                {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254,id:123456},
+                {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254,id:123456},
+                {image : '../../assets/images/beauty.webp',description:'水电费规划就规范电饭锅发的',price : 254,id:123456},
               ]
             },
             select : {
@@ -174,6 +174,15 @@ export default {
         })
         console.log('上拉加载更多')
       },
+    },
+    destroyed() {
+      console.log('我被销毁了')
+    },
+    activated(){
+      console.log('我来了');
+    },
+    deactivated() {
+      console.log('我走了');
     },
 }
 </script>

@@ -1,10 +1,24 @@
 <template>
     <div class="carousel">
-        <slot><img src="../../../assets/images/beauty.webp" alt=""></slot>
+      <Swiper>
+        <Slide>
+          <slot><img src="../../../assets/images/beauty.webp" alt=""></slot>
+        </Slide>
+        <Slide>
+          <slot><img src="../../../assets/images/beauty.webp" alt=""></slot>
+        </Slide>
+        <Slide>
+          <slot><img src="../../../assets/images/beauty.webp" alt=""></slot>
+        </Slide>
+        <Slide>
+          <slot><img src="../../../assets/images/beauty.webp" alt=""></slot>
+        </Slide>
+  </Swiper>
     </div>
 </template>
 
 <script>
+import { Swiper, Slide } from 'vue-swiper-component';
 export default {
       // 组件名称
     name: 'carousel',
@@ -12,11 +26,16 @@ export default {
     props: {
       carousel : { 
         type : Array,
-        default : '../../../assets/images/beauty.webp'
+        default : function(){
+          return ['../../../assets/images/beauty.webp']
+        }
       }
     },
       // 局部注册的组件
-    components: {},
+    components: {
+      Swiper,
+      Slide
+    },
       // 组件状态值
     data () {
         return {
