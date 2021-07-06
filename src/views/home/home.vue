@@ -25,7 +25,10 @@ import feature from './children/feature.vue'
 import barControl from "../../components/content/barControl.vue"
 import goods from '../../components/content/goods/goods.vue'
 import scroll from "../../components/common/scroll/scroll.vue"
-import backTop from "../../components/content/backTop/backTop.vue"
+// import backTop from "../../components/content/backTop/backTop.vue"
+
+// 引入混入文件
+import {backTopMixin} from "../../commonjs/mixin"
 
 import {
   getCarousel, 
@@ -38,6 +41,7 @@ export default {
     name: 'home',
     // 组件参数 接收来自父组件的数据
     props: {},
+    mixins : [backTopMixin],
       // 局部注册的组件
     components: {
       mynav,
@@ -47,12 +51,12 @@ export default {
       barControl,
       goods,
       scroll,
-      backTop
+      // backTop
     },
       // 组件状态值
     data () {
         return {
-          show : false,
+          // show : false,
           currentType : 'pop',
           carousel : [],
           // images : null,
@@ -127,13 +131,14 @@ export default {
             // this.$refs.scroll.scroll.refresh(); 
             // this.$refs.scroll.scroll.finishPullUp();
       },
-      backClick(){
-        // console.log(this.$refs.scroll);
-        this.$refs.scroll.scrollTop(0,0);
-      },
-      contentScroll(position){
-        this.show = position.y < -500
-      },
+
+      // backClick(){
+      //   // console.log(this.$refs.scroll);
+      //   this.$refs.scroll.scrollTop(0,0);
+      // },
+      // contentScroll(position){
+      //   this.show = position.y < -500
+      // },
 
       //网络请求方法
       getCarousel(){
